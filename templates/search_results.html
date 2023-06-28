@@ -1,0 +1,13 @@
+{% extends 'index.html' %}
+
+{% block search_results %}
+    <small>Showing results for "{{ query_result['original_query'] }}".</small>
+    <br/>
+    <small>Found {{ query_result['results_count'] }} results in {{ query_result['seconds_elapsed'] }} seconds.</small>
+    <h2>Results:</h2>
+    <div class='search_result'>
+    {% for result in query_result['results'] %}
+        <p>{{ result['filepath'] }}</p>
+    {% endfor %}
+    </div>
+{% endblock %}

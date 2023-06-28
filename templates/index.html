@@ -1,0 +1,12 @@
+<!doctype html>
+<head>
+    <title>Docserve</title>
+</head>
+<body>
+    <form method="POST" action="/search">
+        <input type="text" name="search_query" required />
+        <input type="submit" value="Search" />
+    </form>
+    {% block search_results %}
+    {% endblock %}
+</body>
